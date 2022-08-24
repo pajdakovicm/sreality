@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Sreality - Prodej bytů 3+kk {% endblock %}</h1>
+
+    {% for i in range(1000): %}
+        <div class='name'>
+            {% if i%2==0 %}
+                 <h3>#{{ new_items[i] }}</h3>
+
+            {% else %}
+                <img src="{{ new_items[i] }}">
+            {% endif %}
+
+        </div>
+   {% endfor %}
+
+
+
+{% endblock %}
